@@ -6,7 +6,7 @@
 <li><a href="https://introduction-de39e.web.app/#/">Dart Gen</a> is an excellent tool for generating API Response Models, Ui Models, and mapper to map data.</li>
 <li>Within a few seconds, this tool can generate code that might take 20-30 mins if done manually and it generates code that is completely null safe.</li>
 <br/>
-<h2>Future Plans For <a href="https://introduction-de39e.web.app/#/">Dart Gen</a></h2>
+<h2>Future Release For <a href="https://introduction-de39e.web.app/#/">Dart Gen</a></h2>
 <br/>
 <li>In future releases I will be working on making it simpler so that Retrofit API calls class, Request Model, and the models it is generating as of now can be generated in one click</li>
 <li>Within a few seconds, this tool can generate code that might take 20-30 mins if done manually and it generates code that is completely null safe.</li>

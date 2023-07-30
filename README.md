@@ -114,23 +114,26 @@
 </br>
 <pre>
   <code>
-      import 'employee_data_response_model.dart';
-      import 'employee_data.dart';
+     import 'employee_data_response_model.dart';
+     import 'employee_data.dart';
       class EmployeeDataMapper {
             EmployeeData call(EmployeeDataResponseModel employeeDataResponseModel) {
-                  return EmployeeData(
-                         status: (employeeDataResponseModel.status) ?? "",
-                           data: Data(
-                             id: (employeeDataResponseModel.data?.id) ?? 0,
-                             employeeName: (employeeDataResponseModel.data?.employeeName) ?? "",
-                             employeeSalary: (employeeDataResponseModel.data?.employeeSalary) ?? 0,
-                             employeeAge: (employeeDataResponseModel.data?.employeeAge) ?? 0,
-                             profileImage: (employeeDataResponseModel.data?.profileImage) ?? "",
-                            ),
-                        message: (employeeDataResponseModel.message) ?? "",
-                        );
-            }
+                        return EmployeeData(
+                                status: (employeeDataResponseModel.status) ?? "",
+                                data: (employeeDataResponseModel.data?.map(
+                                (dataItem) => Data(
+                                              id: (dataItem.id) ?? 0,
+                                              employeeName: (dataItem.employeeName) ?? "",
+                                              employeeSalary: (dataItem.employeeSalary) ?? 0,
+                                              employeeAge: (dataItem.employeeAge) ?? 0,
+                                              profileImage: (dataItem.profileImage) ?? "",
+                                              ),
+                                  ))?.toList() ??[],
+                          message: (employeeDataResponseModel.message) ?? "",
+              );
       }
+}
+
 
   </code>
 </pre>
